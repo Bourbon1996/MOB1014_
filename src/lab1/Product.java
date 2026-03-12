@@ -19,7 +19,7 @@ public class Product {
 	
 	public void setId(String id) {
 		if(id.isEmpty()) {
-			System.out.println("Id không được để trống");
+			System.out.println("Do not leave blank");
 			}else{
 				this.id = id;
 			}
