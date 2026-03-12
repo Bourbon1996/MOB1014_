@@ -27,11 +27,13 @@ public class Xe {
 								"\nNăm Sản Xuất: " + getNamSanXuat());
 		}
 
+		// Tạo Constructor có tham số truyền vào 
 		public Xe(String hangXe, int namSanXuat) {
 			this.hangXe  = hangXe;
 			this.namSanXuat = namSanXuat;
 		}
 		
+		// Tạo Constructor rỗng
 		public Xe() {};
 		
 }
