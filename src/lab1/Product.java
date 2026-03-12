@@ -55,8 +55,9 @@ public class Product {
 	// Method toString( dùng để in thông tin object )
 	
 	@Override
+	
 	public String toString() {
-		return "ID: " + id + "Name: " + name + "BasePrice: " + basePrice;
+		return "ID: " + id + " Name: " + name + " Final Price: " + basePrice;
 	}
 }
 	
