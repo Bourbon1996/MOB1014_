@@ -53,7 +53,7 @@ public class Employee {
 		// Method toString( dùng để in thông tin object )
 		@Override
 		public String toString() {
-			return "Id: " + id + " Name: " + name + " BasicSalaray: " + basicSalaray;
+			return "Id: " + id + " Name: " + name + " BasicSalaray: " + (long)basicSalaray;
 			
 		}
 				

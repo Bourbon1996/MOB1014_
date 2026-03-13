@@ -29,7 +29,7 @@ public class Main {
 			}
 		}
 		
-		System.out.println("The most expensive product:  ");
+		System.out.println("The most expensive product");
 		System.out.println(max);
 	}
 }

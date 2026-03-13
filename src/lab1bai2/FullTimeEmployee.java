@@ -40,4 +40,9 @@ public class FullTimeEmployee extends Employee{
 	public double income() {
 		return getBasicSalaray() + bonus - penalty;
 	}
+	
+	public String toString() {
+	
+		return super.toString() + " Bounus: " + bonus+ " Penalty: " + penalty;
+	}
 }
