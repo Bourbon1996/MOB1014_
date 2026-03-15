@@ -6,6 +6,9 @@ public class Employee {
 	private String name;
 	private double basicSalaray;
 	
+	
+	public Employee() {}
+	
 	// Tạo constructor 
 	public Employee(String id, String name, double basicSalaray) {
 		this.id =  id;
@@ -18,12 +21,13 @@ public class Employee {
 			return this.id;
 		}
 		
-		public void setid(String id) {
-			if(id.isEmpty()) {
+		public boolean setid(String id) {
+			if(id != "") {
 				this.id = id;
-			}else {
-				System.out.println("Do not leave blank");
-			}
+				return true;
+			} 
+				
+			return false;
 		}
 		
 		public String getName() {

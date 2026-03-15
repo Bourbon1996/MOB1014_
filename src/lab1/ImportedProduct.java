@@ -5,6 +5,8 @@ public class ImportedProduct extends Product {
 	private  double importTaxRate;
 	private double shippingFee;
 	
+	public ImportedProduct() {}
+	
 	public ImportedProduct(String id, String name, double basePrice,
 			double importTaxRate, double shippingFee) {
 		super(id, name, basePrice);
@@ -16,12 +18,12 @@ public class ImportedProduct extends Product {
 		return this.importTaxRate;
 	}
 	
-	public void setImportTaxRate(double importTaxRate) {
+	public boolean setImportTaxRate(double importTaxRate) {
 		if(importTaxRate >= 0 && importTaxRate <=1) {
 			 this.importTaxRate = importTaxRate;
-		}else {
-			System.out.println("ImportTaxRate must be 0 -> 1");
-		}
+			 return true;
+		} 
+			return false;
 	}
 	
 	public double getShippingFee() {
@@ -29,17 +31,24 @@ public class ImportedProduct extends Product {
 		
 	}
 	
-	public void setShippingFee(double shippingFee) {
+	public boolean setShippingFee(double shippingFee) {
 		if(shippingFee >=0) {
 			this.shippingFee = shippingFee;
-		}else {
-			System.out.println("ShippingFee must be >=0");
+			return true;
 		}
+			return false;
 	}
 	
 	@Override
 	
 	public double finalPrice() {
-		return getBasePrice() + getBasePrice() * importTaxRate + shippingFee;
+		return super.finalPrice() + super.finalPrice()* this.importTaxRate + this.shippingFee;
 	}
+
+	@Override
+	public String toString() {
+		return super.toString() + "ImportedProduct [importTaxRate=" + importTaxRate + ", shippingFee=" + shippingFee + "]";
+	}
+	
+	
 }

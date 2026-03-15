@@ -5,6 +5,8 @@ public class Product {
 	private String name;
 	private double basePrice;
 	
+	public Product() {}
+	
 	// Khởi tạo Constructor
 	public Product(String id, String name, double basePrice) {
 		this.id = id;
@@ -17,14 +19,13 @@ public class Product {
 		return this.id;
 	}
 	
-	public void setId(String id) {
-		if(id.isEmpty()) {
-			System.out.println("Do not leave blank");
-			}else{
-				this.id = id;
-			}
-					
-					
+	// validate ID
+	public boolean setId(String id) {
+		if(id != "") {
+			this.id = id;
+			return true;
+		}
+		return false;				
 	}
 	
 	public String getName() {
@@ -39,26 +40,32 @@ public class Product {
 		return this.basePrice;
 	}
 	
-	public void setBasePrice(double basePrice) {
+	public boolean setBasePrice(double basePrice) {
 		if(basePrice >=0) {
 			this.basePrice = basePrice;
-		}else {
-			System.out.println("Giá phải >= 0 vui lòng nhập lại");
-		}
+			return true;
+		} return false;
+			
+		
 	}
 	
 	// Method finalPrice = basePrice
 	public double finalPrice() {
-		return basePrice;
+		return this.basePrice;
 	}
+
 	
 	// Method toString( dùng để in thông tin object )
-	
 	@Override
-	
 	public String toString() {
-		return "ID: " + id + " Name: " + name + " Final Price: " + basePrice;
+		return "Product [id=" + id + ", name=" + name + ", basePrice=" + basePrice +  ", finalPrice="+ finalPrice() + "]";
 	}
+	
+	
+	
+	
+	
+	
 }
 	
 	
