@@ -18,10 +18,11 @@ public class FullTimeEmployee extends Employee{
 		
 	}
 	
-	public void setbonus(double bonus) {
+	public boolean setbonus(double bonus) {
 		if(bonus >= 0) {
 			this.bonus = bonus;
-		}	
+			return true;
+		}return false;	
 	}
 	
 	public double getPenalty() {
@@ -29,16 +30,17 @@ public class FullTimeEmployee extends Employee{
 		
 	}
 	
-	public void setpenalty(double penalty) {
+	public boolean setpenalty(double penalty) {
 		if(penalty >= 0) {
 			this.penalty = penalty;
-		}
+			return true;
+		}return false;
 	}
 	
 	
 	@Override
 	public double income() {
-		return getBasicSalaray() + bonus - penalty;
+		return super.getBasicSalaray() + this.bonus - this.penalty;
 	}
 
 	@Override

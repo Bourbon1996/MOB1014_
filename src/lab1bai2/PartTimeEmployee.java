@@ -16,25 +16,27 @@ public class PartTimeEmployee extends Employee {
 			return this.workingHours;					
 		}
 		
-		public void setWorkingHours(double workingHours) {
+		public boolean setWorkingHours(double workingHours) {
 			if(workingHours >= 0) {
 				this.workingHours = workingHours;
-			}
+				return true;
+			}return false;
 		}	
 		public double getHourlyRate() {
 			return this.hourlyRate;
 		}
 		
-		public void sethourslyRate(double hourlyRate) {
+		public boolean sethourslyRate(double hourlyRate) {
 			if(hourlyRate >=0) {
 				this.hourlyRate = hourlyRate;
-			}
+				return true;
+			} return false;
 		}
 	
 		
 	@Override
 	public double income() {
-		return workingHours * hourlyRate;
+		return this.workingHours * this.hourlyRate;
 	}
 
 	@Override
