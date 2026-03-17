@@ -35,70 +35,36 @@ public class Main {
 //		System.out.println(max);
 		
 		
-//		ArrayList<Product> list = new ArrayList<Product>();
-//		
-//		// tạo 5 sản phẩm 
-//		
-//		// cách 1 nhâp trực tiếp sau đó add vào list
-//		Product sp1 = new Product("SP1", "Nước Ngọt", 15 );
-//		list.add(sp1);
-//		
-//		// hoặc add và nhập trong add
-//		list.add(new Product ("SP2", "Bánh Kẹo", 10));
-//		list.add(new Product ("SP3", "Đồ Ăn Vặt", 5));
-//		
-//		list.add(new ImportedProduct("SP4", "Coffe", 25, 0.1, 1));
-//		list.add(new ImportedProduct("SP5", "Thuốc Lá", 10, 0.5, 1));
-//		
-//		for(Product x : list) {
-//			System.out.println(x.toString());
-//		}
-//		
-//		Product max = list.get(0);
-//		
-//		for(Product x : list) {
-//			if(x.finalPrice() > max.finalPrice()) {
-//				max = x;
-//			}
-//		}
-//		
-//		System.out.println("The most expensive product");
-//		System.out.println(max);
-//	
-		ArrayList<Product> dsProduct = new ArrayList<Product>();
-        
-        // Khởi tạo sản phẩm thứ nhất
-        ImportedProduct iP = new ImportedProduct();
-        iP.setId("Ao01");
-        iP.setName("Ao thun");
-        iP.setBasePrice(10);
-        iP.setImportTaxRate(0.1);
-        iP.setShippingFee(2);
-        dsProduct.add(iP);
+		ArrayList<Product> list = new ArrayList<Product>();
+		
+		// tạo 5 sản phẩm 
+		
+		// cách 1 nhâp trực tiếp sau đó add vào list
+		Product sp1 = new Product("SP1", "Nước Ngọt", 15 );
+		list.add(sp1);
+		
+		// hoặc add và nhập trong add
+		list.add(new Product ("SP2", "Bánh Kẹo", 10));
+		list.add(new Product ("SP3", "Đồ Ăn Vặt", 5));
+		
+		list.add(new ImportedProduct("SP4", "Coffe", 25, 0.1, 1));
+		list.add(new ImportedProduct("SP5", "Thuốc Lá", 10, 0.5, 1));
+		
+		for(Product x : list) {
+			System.out.println(x.toString());
+		}
+		
+		Product max = list.get(0);
+		
+		for(Product x : list) {
+			if(x.finalPrice() > max.finalPrice()) {
+				max = x;
+			}
+		}
+		
+		System.out.println("The most expensive product");
+		System.out.println(max);
 
-        // Khởi tạo sản phẩm thứ hai
-        ImportedProduct iP2 = new ImportedProduct();
-        iP2.setId("Ao02");
-        iP2.setName("Ao so mi");
-        iP2.setBasePrice(12);
-        iP2.setImportTaxRate(0.15);
-        iP2.setShippingFee(1);
-        dsProduct.add(iP2);
-
-        /* // Đoạn code này đang bị comment (vô hiệu hóa)
-        for(int i=0; i<2; i++) {
-            ImportedProductDAO p3 = new ImportedProductDAO();
-            p3.NewImportedProduct();
-            dsProduct.add(p3);
-        }
-        */
-
-        // Vòng lặp in danh sách sản phẩm
-        for (Product p : dsProduct) {
-            System.out.println(p.toString());
-        }
- 
-
-//		
+				
 	}
 }
