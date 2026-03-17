@@ -42,25 +42,28 @@ public class Employee {
 			return this.basicSalaray;
 		}
 		
-		public void setbasicSalaray(double basicSalaray) {
+		public boolean setbasicSalaray(double basicSalaray) {
 			if(basicSalaray >= 0) {
 				this.basicSalaray = basicSalaray;
-			}else {
-				System.out.println("BasicSalaray must be greater than >=0");
-			}
+				return true;
+			} 
+			return false;
+				
+			
 		}
 		// Method income() =  basicSalaray
 		public double income() {
 			return basicSalaray;
 		}
+
 		
 		// Method toString( dùng để in thông tin object )
 		@Override
 		public String toString() {
-			return "Id: " + id + " Name: " + name + " BasicSalaray: " + (long)basicSalaray;
-			
+			return "Employee [id=" + id + ", name=" + name + ", basicSalaray=" + basicSalaray + "]";
 		}
+		
+			
+	}	
 				
 	
-
-}

@@ -40,9 +40,13 @@ public class FullTimeEmployee extends Employee{
 	public double income() {
 		return getBasicSalaray() + bonus - penalty;
 	}
-	
+
+	@Override
 	public String toString() {
-	
-		return super.toString() + " Bounus: " + bonus+ " Penalty: " + penalty;
+		return "FullTimeEmployee [bonus=" + bonus + ", penalty=" + penalty + "]";
 	}
+	
+	
 }
+	
+	

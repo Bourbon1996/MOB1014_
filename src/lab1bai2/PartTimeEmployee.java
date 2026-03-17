@@ -36,8 +36,12 @@ public class PartTimeEmployee extends Employee {
 	public double income() {
 		return workingHours * hourlyRate;
 	}
-	
+
+	@Override
 	public String toString() {
-		return super.toString() + " WorkingHours: " + workingHours + " HourlyRate: " + hourlyRate;
+		return "PartTimeEmployee [workingHours=" + workingHours + ", hourlyRate=" + hourlyRate + "]";
 	}
+	
+	
+	
 }
