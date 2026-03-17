@@ -39,7 +39,7 @@ public class PartTimeEmployee extends Employee {
 
 	@Override
 	public String toString() {
-		return "PartTimeEmployee [workingHours=" + workingHours + ", hourlyRate=" + hourlyRate + "]";
+		return super.toString() +  "PartTimeEmployee [workingHours=" + workingHours + ", hourlyRate=" + hourlyRate + "]";
 	}
 	
 	
